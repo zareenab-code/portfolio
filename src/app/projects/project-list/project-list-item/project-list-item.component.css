@@ -1,0 +1,57 @@
+.sm-card {
+  margin: 10px;
+}
+
+/* WRAPPING DIV FOR CARD */
+.card-div {
+  position: relative;
+  perspective: 1000px;
+  margin: 10px;
+}
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard {
+  position: relative;
+  height: 100px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.card-div:hover .thecard {
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.thefront {
+  position: absolute;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback {
+  height: 50%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.card-title-md {
+  font-size: 16px;
+}
+p {
+  text-align: center;
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+  .card-title-md {
+    font-size: 14px;
+  }
+  mat-card-content {
+    font-size: 12px;
+  }
+}

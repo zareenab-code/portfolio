@@ -1,0 +1,56 @@
+<!-- main wrapping div -->
+<div
+  class="main-div"
+  fxFlex="100"
+  fxLayout="column"
+  fxLayoutAlign="start stretch"
+  fxLayoutGap="30px"
+>
+  <!-- profile info div -->
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="center">
+    <div
+      fxFlex
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="5px"
+      class="bg"
+    >
+      <img
+        class="profile-pic"
+        src="../../assets/profile-pic/profile_pic.jpeg"
+        alt="profile-pic"
+      />
+      <h1>{{ basicInfo?.name }}</h1>
+      <h2 class="sub-heading">{{ basicInfo?.title }}</h2>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="center">
+          <mat-icon style="margin-right: 2px" inline="true">mail</mat-icon
+          >{{ basicInfo?.email }}
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center">
+          <mat-icon style="margin-right: 2px" inline="true">phone</mat-icon
+          >{{ basicInfo?.mobileNo }}
+        </div>
+      </div>
+      <button
+        [ngClass]="{ 'know-me-more': !buttonClicked && applyAnimation }"
+        [routerLink]="['/resume']"
+        mat-raised-button
+        color="accent"
+        (click)="onClick()"
+        class="kmm-button"
+      >
+        KNOW ME MORE
+      </button>
+    </div>
+  </div>
+  <!-- projects div -->
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="center">
+      <span class="projects-heading">PROJECTS</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <app-project-list [projects]="projects"></app-project-list>
+    </div>
+  </div>
+</div>

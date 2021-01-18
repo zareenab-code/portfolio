@@ -1,0 +1,45 @@
+<mat-nav-list>
+  <a
+    style="height: 1px; opacity: 0"
+    mat-list-item
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    mat-list-item
+    (click)="onClose()"
+  >
+    <mat-icon mat-list-icon>home</mat-icon>
+    <span class="nav-caption">Home</span>
+  </a>
+  <a
+    mat-list-item
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    mat-list-item
+    (click)="onClose()"
+  >
+    <mat-icon mat-list-icon>home</mat-icon>
+    <span class="nav-caption">Home</span>
+  </a>
+  <a
+    mat-list-item
+    routerLink="/resume"
+    routerLinkActive="active"
+    mat-list-item
+    (click)="onClose()"
+  >
+    <mat-icon mat-list-icon>text_snippet</mat-icon>
+    <span class="nav-caption">Resume</span>
+  </a>
+  <a
+    mat-list-item
+    routerLink="/projects"
+    routerLinkActive="active"
+    mat-list-item
+    (click)="onClose()"
+  >
+    <mat-icon mat-list-icon>work</mat-icon>
+    <span class="nav-caption">Projects</span>
+  </a>
+</mat-nav-list>

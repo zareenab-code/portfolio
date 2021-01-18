@@ -1,0 +1,63 @@
+.main-div {
+  height: 100%;
+}
+
+.bg {
+  height: 500px;
+  background-image: url("../../assets/images/bg1.jpeg");
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 50%;
+  width: auto;
+}
+
+.projects-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #607d8b;
+}
+
+.sub-heading {
+  color: #607d8b;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 0;
+  text-align: center;
+}
+h1 {
+  margin: 0 0 0;
+  text-align: center;
+}
+
+.know-me-more {
+  animation: wiggle 400ms 8 ease-out none;
+}
+.kmm-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  h2 {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}

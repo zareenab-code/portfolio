@@ -1,0 +1,92 @@
+<div class="main-div">
+  <div
+    class="wrapper"
+    fxLayout="column"
+    fxLayoutAlign="start center"
+    fxLayoutGap="10px"
+  >
+    <div
+      fxFlex="100"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      class="resume-heading"
+    >
+      RESUME
+      <a
+        href="../../assets/resume/resume.pdf"
+        download="zareena"
+        mat-icon-button
+        color="primary"
+        aria-label="Example icon button with a home icon"
+      >
+        <mat-icon>get_app</mat-icon>
+      </a>
+    </div>
+    <!-- Basic Info -->
+    <div
+      fxFlex="100"
+      fxLayout="column"
+      fxLayout.lt-md="column"
+      fxLayoutAlign="center"
+      fxLayoutGap="10px"
+      class="profile-div"
+    >
+      <div
+        fxFlex
+        fxFlex.lt-md="100"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutAlign.lt-md="center center"
+      >
+        <img
+          class="profile-pic"
+          src="../../assets/profile-pic/profile_pic.jpeg"
+          alt="profile-pic"
+        />
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <h2>{{ basicInfo?.name }}</h2>
+        <h4 class="sub-heading">{{ basicInfo?.title }}</h4>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="10px">
+          <div fxLayout="row" fxLayoutAlign="center">
+            <mat-icon style="margin-right: 2px" inline="true">mail</mat-icon
+            >{{ basicInfo?.email }}
+          </div>
+          <div fxLayout="row" fxLayoutAlign="center">
+            <mat-icon style="margin-right: 2px" inline="true">phone</mat-icon
+            >{{ basicInfo?.mobileNo }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Experience -->
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <h2 class="main-heading">Professional Experience</h2>
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        *ngFor="let ex of experience"
+      >
+        <h4 class="sub-heading">{{ ex.company }}</h4>
+        <h4>{{ ex.designation }}</h4>
+        <p>{{ ex.duration }}</p>
+      </div>
+    </div>
+    <!-- Skills -->
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <h2 class="main-heading">Technical Skills</h2>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <h4 class="sub-heading">Languages</h4>
+        <h4 class="">{{ skills?.languages }}</h4>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <h4 class="sub-heading">Frameworks</h4>
+        <h4>{{ skills?.frameworks }}</h4>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <h4 class="sub-heading">Databases</h4>
+        <h4>{{ skills?.databases }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

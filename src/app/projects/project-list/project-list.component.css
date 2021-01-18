@@ -1,0 +1,13 @@
+.content {
+  padding: 16px;
+  max-width: 100%;
+  /* margin-bottom: 30px; */
+}
+
+.content > mat-card {
+  /* width: 200px; */
+}
+
+.project-list {
+  margin-bottom: 30px;
+}

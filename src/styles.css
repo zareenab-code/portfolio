@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+.mat-button-focus-overlay {
+  background-color: transparent !important;
+}
+
+.mat-card-header-text {
+  margin: 0 0 !important;
+}
+
+.app-primary-color {
+  color: #607d8b;
+}
+
+.app-accent-color {
+  color: #ff4081;
+}
+/* primary color #607d8b;  accent color  #ff4081;*/
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.26);
+}

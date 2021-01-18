@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>{{ passedData.name }}</h2>
+<div mat-dialog-content class="mat-typography">
+  <div>
+    <div fxLayout="column" fxLayoutGap="10px">
+      <!-- Title -->
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex.gt-xs="25" fxFlex.xs="100" class="label-color">
+          <b>Title</b>
+        </div>
+        <div fxFlex.gt-xs="75" fxFlex.xs="100">{{ passedData.title }}</div>
+      </div>
+      <!-- Description -->
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex.gt-xs="25" fxFlex.xs="100" class="label-color">
+          <b>Description</b>
+        </div>
+        <div fxFlex.gt-xs="75" fxFlex.xs="100">
+          {{ passedData.description }}
+        </div>
+      </div>
+      <!-- Type -->
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex.gt-xs="25" fxFlex.xs="100" class="label-color">
+          <b>Type</b>
+        </div>
+        <div fxFlex.gt-xs="75" fxFlex.xs="100">{{ passedData.type }}</div>
+      </div>
+      <!-- Company -->
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex.gt-xs="25" fxFlex.xs="100" class="label-color">
+          <b>Company</b>
+        </div>
+        <div fxFlex.gt-xs="75" fxFlex.xs="100">{{ passedData.company }}</div>
+      </div>
+      <!-- Technologies -->
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex.gt-xs="25" fxFlex.xs="100" class="label-color">
+          <b>Technologies</b>
+        </div>
+        <div fxFlex.gt-xs="75" fxFlex.xs="100">
+          <span
+            *ngFor="let technology of passedData.technologies; first as isFirst"
+            >{{ isFirst ? "" : ",   " }}{{ technology }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</div>

@@ -1,0 +1,37 @@
+<mat-toolbar fxFlex fxFlexAlign="center" color="primary">
+  <div fxHide.gt-xs>
+    <button
+      #menuBtn
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="onToggleSidenav()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><img
+        style="margin-right: 4px"
+        src="../../../assets/profile-pic/profile_pic.jpeg"
+        alt="Avatar"
+      />{{ name }}</a
+    >
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li>
+        <a [routerLink]="['/resume']" routerLinkActive="active"> Resume </a>
+      </li>
+      <li>
+        <a routerLink="/projects" routerLinkActive="active">
+          <span>Projects</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

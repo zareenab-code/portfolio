@@ -1,0 +1,39 @@
+<!-- small devices -->
+<div class="project-list" *ngIf="isExtraSmallDevice || isSmallDevice">
+  <div class="content" fxLayout="row wrap">
+    <div
+      fxFlex="25%"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let project of projects"
+    >
+      <app-project-list-item
+        style="height: 100%"
+        [project]="project"
+        (projectClicked)="projectDetails($event)"
+      ></app-project-list-item>
+    </div>
+  </div>
+</div>
+
+<!-- medium and large devices -->
+
+<div
+  class="project-list"
+  *ngIf="isMediumDevice || isLargeDevice || isExtraLargeDevice"
+>
+  <div class="content" fxLayout="row wrap">
+    <div
+      fxFlex="25%"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let project of projects"
+    >
+      <app-project-list-item
+        style="height: 100%"
+        [project]="project"
+        (projectClicked)="projectDetails($event)"
+      ></app-project-list-item>
+    </div>
+  </div>
+</div>

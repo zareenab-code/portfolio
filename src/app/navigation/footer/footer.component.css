@@ -1,0 +1,9 @@
+.footer {
+  height: 40px;
+  font-size: 1rem;
+}
+
+.footer-text {
+  margin: 0;
+  color: darkgray;
+}
